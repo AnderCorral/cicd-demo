@@ -7,5 +7,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -name: Mostrar mensaje
-      run: echo "Hola mundo Action"
+      - name: Mostrar mensaje
+        run: echo "Hola mundo Action"
+      - name: Bajar codigo
+        uses: actions/checkout@v5
+      - name: Probar codigo
+        run: python3 main.py
